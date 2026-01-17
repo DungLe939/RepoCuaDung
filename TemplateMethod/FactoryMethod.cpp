@@ -47,28 +47,28 @@ public:
     }
 };
 
-// === Client Code ===
-int main() {
-        // Su dung rat don gian - chi can goi static method
-        Report* pdf = ReportFactory::createReport("pdf");
-        if (pdf) {
-            pdf->generate();
-            delete pdf;
-        }
-
-        Report* html = ReportFactory::createReport("html");
-        if (html) {
-            html->generate();
-            delete html;
-        }
-
-        // Co the lay type tu input
-        string userChoice = "csv";
-        Report* report = ReportFactory::createReport(userChoice);
-        if (report) {
-            report->generate();
-            delete report;
-        }
-
-    return 0;
-}
+//// === Client Code ===
+//int main() {
+//        // Su dung rat don gian - chi can goi static method
+//        Report* pdf = ReportFactory::createReport("pdf");
+//        if (pdf) {
+//            pdf->generate();
+//            delete pdf;
+//        }
+//
+//        Report* html = ReportFactory::createReport("html");
+//        if (html) {
+//            html->generate();
+//            delete html;
+//        }
+//
+//        // Co the lay type tu input
+//        string userChoice = "csv";
+//        Report* report = ReportFactory::createReport(userChoice);
+//        if (report) {
+//            report->generate();
+//            delete report;
+//        }
+//
+//    return 0;
+//}

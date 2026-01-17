@@ -92,16 +92,16 @@ void createDocuments(DocumentFactory* factory) {
     delete exporter;
 }
 
-int main() {
-    cout << "=== Tao bo tai lieu PDF ===" << endl;
-    DocumentFactory* pdfFactory = new PDFDocumentFactory();
-    createDocuments(pdfFactory);
-    delete pdfFactory;
-
-    cout << "\n=== Tao bo tai lieu HTML ===" << endl;
-    DocumentFactory* htmlFactory = new HTMLDocumentFactory();
-    createDocuments(htmlFactory);
-    delete htmlFactory;
-
-    return 0;
-}
+//int main() {
+//    cout << "=== Tao bo tai lieu PDF ===" << endl;
+//    DocumentFactory* pdfFactory = new PDFDocumentFactory();
+//    createDocuments(pdfFactory);
+//    delete pdfFactory;
+//
+//    cout << "\n=== Tao bo tai lieu HTML ===" << endl;
+//    DocumentFactory* htmlFactory = new HTMLDocumentFactory();
+//    createDocuments(htmlFactory);
+//    delete htmlFactory;
+//
+//    return 0;
+//}

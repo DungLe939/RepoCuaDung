@@ -166,14 +166,13 @@ void ShippingState::deliver(Order* order) {
     order->setState(new DeliveredState());
 }
 
-// === Client Code ===
+ //=== Client Code ===
 int main() {
     cout << "========== TEST CASE 1: Quy trinh binh thuong ==========" << endl;
- Order* order1 = new Order("ORD-001", 500000);
-  cout << endl;
+   Order* order1 = new Order("ORD-001", 500000);
+   cout << endl;
 
-    order1->confirm();   // Pending -> Confirmed
-    order1->ship();      // Confirmed -> Shipping
+         // Confirmed -> Shipping
     order1->deliver();   // Shipping -> Delivered
     cout << "Trang thai cuoi: " << order1->getStateName() << endl;
     delete order1;

@@ -102,20 +102,20 @@ void RejectedState::publish(Document* doc) {
 }
 
 // === Client Code ===
-int main() {
-    Document* doc = new Document("Noi dung bai viet");
-
-    cout << "\n--- Quy trinh duyet bai ---" << endl;
-    doc->publish();  // Draft -> Moderation
-    doc->publish();  // Moderation -> Published
-    doc->publish();  // Da published roi
-
-    cout << "\n--- Thu reject ---" << endl;
-    doc->reject();   // Published -> Draft
-    doc->publish();  // Draft -> Moderation
-    doc->reject();   // Moderation -> Rejected
-    doc->publish();  // Rejected -> Moderation
-
-    delete doc;
-    return 0;
-}
+//int main() {
+//    Document* doc = new Document("Noi dung bai viet");
+//
+//    cout << "\n--- Quy trinh duyet bai ---" << endl;
+//    doc->publish();  // Draft -> Moderation
+//    doc->publish();  // Moderation -> Published
+//    doc->publish();  // Da published roi
+//
+//    cout << "\n--- Thu reject ---" << endl;
+//    doc->reject();   // Published -> Draft
+//    doc->publish();  // Draft -> Moderation
+//    doc->reject();   // Moderation -> Rejected
+//    doc->publish();  // Rejected -> Moderation
+//
+//    delete doc;
+//    return 0;
+//}

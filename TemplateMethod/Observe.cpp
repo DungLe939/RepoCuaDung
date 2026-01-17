@@ -130,56 +130,56 @@ public:
     string getName() override { return "InventoryNotifier"; }
 };
 
-// === Client Code ===
-int main() {
-    cout << "============ OBSERVER PATTERN DEMO ============\n" << endl;
-
-    // Tao don hang (Subject)
-    Order* order = new Order("ORD-001", 500000);
-    cout << endl;
-
-    // Tao cac observers
-    EmailNotifier* email = new EmailNotifier("khachhang@gmail.com");
-    SMSNotifier* sms = new SMSNotifier("0901234567");
-    LogNotifier* log = new LogNotifier();
-    InventoryNotifier* inventory = new InventoryNotifier();
-
- // Dang ky observers vao don hang
-    cout << "=== DANG KY OBSERVERS ===" << endl;
-    order->attach(email);
-    order->attach(sms);
-    order->attach(log);
-    order->attach(inventory);
-
-    // Thay doi trang thai -> tat ca observers se nhan thong bao
-    cout << "\n=== THAY DOI TRANG THAI ===" << endl;
-    order->setStatus("Confirmed");   // Tat ca 4 observers nhan thong bao
-    order->setStatus("Shipping");  // Tat ca 4 observers nhan thong bao
-    order->setStatus("Delivered");   // Tat ca 4 observers nhan thong bao
-
-    // Huy dang ky SMS - khong muon nhan SMS nua
-  cout << "\n=== HUY DANG KY SMS ===" << endl;
-    order->detach(sms);
-
- // Thay doi trang thai -> chi 3 observers nhan thong bao (khong co SMS)
-    cout << "\n=== TIEP TUC THAY DOI ===" << endl;
-    order->setStatus("Completed");
-
-    // Test case: Don hang bi huy
-    cout << "\n=== TEST DON HANG MOI BI HUY ===" << endl;
-    Order* order2 = new Order("ORD-002", 300000);
-    order2->attach(email);
-    order2->attach(inventory);
-    order2->setStatus("Confirmed");
-    order2->setStatus("Cancelled");  // Inventory se hoan tra hang
-
-    // Giai phong bo nho
-    delete order;
-    delete order2;
-    delete email;
-    delete sms;
-    delete log;
-    delete inventory;
-
-    return 0;
-}
+//// === Client Code ===
+//int main() {
+//    cout << "============ OBSERVER PATTERN DEMO ============\n" << endl;
+//
+//    // Tao don hang (Subject)
+//    Order* order = new Order("ORD-001", 500000);
+//    cout << endl;
+//
+//    // Tao cac observers
+//    EmailNotifier* email = new EmailNotifier("khachhang@gmail.com");
+//    SMSNotifier* sms = new SMSNotifier("0901234567");
+//    LogNotifier* log = new LogNotifier();
+//    InventoryNotifier* inventory = new InventoryNotifier();
+//
+// // Dang ky observers vao don hang
+//    cout << "=== DANG KY OBSERVERS ===" << endl;
+//    order->attach(email);
+//    order->attach(sms);
+//    order->attach(log);
+//    order->attach(inventory);
+//
+//    // Thay doi trang thai -> tat ca observers se nhan thong bao
+//    cout << "\n=== THAY DOI TRANG THAI ===" << endl;
+//    order->setStatus("Confirmed");   // Tat ca 4 observers nhan thong bao
+//    order->setStatus("Shipping");  // Tat ca 4 observers nhan thong bao
+//    order->setStatus("Delivered");   // Tat ca 4 observers nhan thong bao
+//
+//    // Huy dang ky SMS - khong muon nhan SMS nua
+//  cout << "\n=== HUY DANG KY SMS ===" << endl;
+//    order->detach(sms);
+//
+// // Thay doi trang thai -> chi 3 observers nhan thong bao (khong co SMS)
+//    cout << "\n=== TIEP TUC THAY DOI ===" << endl;
+//    order->setStatus("Completed");
+//
+//    // Test case: Don hang bi huy
+//    cout << "\n=== TEST DON HANG MOI BI HUY ===" << endl;
+//    Order* order2 = new Order("ORD-002", 300000);
+//    order2->attach(email);
+//    order2->attach(inventory);
+//    order2->setStatus("Confirmed");
+//    order2->setStatus("Cancelled");  // Inventory se hoan tra hang
+//
+//    // Giai phong bo nho
+//    delete order;
+//    delete order2;
+//    delete email;
+//    delete sms;
+//    delete log;
+//    delete inventory;
+//
+//    return 0;
+//}

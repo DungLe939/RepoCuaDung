@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractFactory.cpp" />
+    <ClCompile Include="BridgePattern.cpp" />
     <ClCompile Include="FactoryMethod.cpp" />
     <ClCompile Include="Observe.cpp" />
     <ClCompile Include="OrderState.cpp" />
