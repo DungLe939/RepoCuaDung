@@ -1,0 +1,3 @@
+NormalizeCasing
+RemoveSpecialsCharacter Regex=[-_/.]
+AddDatePrefix Format=yyyymmdd_

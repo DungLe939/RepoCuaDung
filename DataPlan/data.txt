@@ -1,0 +1,3 @@
+DonGiaGoi=1000
+DonGiaTruyCap=200
+VAT=10
